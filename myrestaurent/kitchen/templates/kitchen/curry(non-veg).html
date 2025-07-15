@@ -1,0 +1,160 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curry & Add-ons Menu</title>
+  <link rel="stylesheet" href="{% static 'kitchen/mandi.css' %}" />
+</head>
+<body>
+
+  <h1>NON-VEGETARIAN CURRIES</h1>
+  <div class="menu">
+    <!-- NON-VEG CURRIES -->
+    <div class="items">
+      <h2>Egg Mughalai</h2>
+      <div class="variant">
+        <span>Half - ₹139</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Egg Mughalai - Half', 139, -1)">−</button>
+          <span id="qty-Egg Mughalai - Half">0</span>
+          <button onclick="changeQuantity('Egg Mughalai - Half', 139, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹209</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Egg Mughalai - Full', 209, -1)">−</button>
+          <span id="qty-Egg Mughalai - Full">0</span>
+          <button onclick="changeQuantity('Egg Mughalai - Full', 209, 1)">+</button>
+        </div>
+      </div>
+    </div>
+        <div class="items">
+      <h2>Chicken Kolhapuri</h2>
+      <div class="variant">
+        <span>Half - ₹169</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Chicken Kolhapuri - Half', 169, -1)">−</button>
+          <span id="qty-Chicken Kolhapuri - Half">0</span>
+          <button onclick="changeQuantity('Chicken Kolhapuri - Half', 169, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹279</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Chicken Kolhapuri - Full', 279, -1)">−</button>
+          <span id="qty-Chicken Kolhapuri - Full">0</span>
+          <button onclick="changeQuantity('Chicken Kolhapuri - Full', 279, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Chicken Korma</h2>
+      <div class="variant">
+        <span>Half - ₹179</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Chicken Korma - Half', 179, -1)">−</button>
+          <span id="qty-Chicken Korma - Half">0</span>
+          <button onclick="changeQuantity('Chicken Korma - Half', 179, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹289</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Chicken Korma - Full', 289, -1)">−</button>
+          <span id="qty-Chicken Korma - Full">0</span>
+          <button onclick="changeQuantity('Chicken Korma - Full', 289, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Chicken Hyderabadi</h2>
+      <div class="variant">
+        <span>Half - ₹179</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Chicken Hyderabadi - Half', 179, -1)">−</button>
+          <span id="qty-Chicken Hyderabadi - Half">0</span>
+          <button onclick="changeQuantity('Chicken Hyderabadi - Half', 179, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹269</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Chicken Hyderabadi - Full', 269, -1)">−</button>
+          <span id="qty-Chicken Hyderabadi - Full">0</span>
+          <button onclick="changeQuantity('Chicken Hyderabadi - Full', 269, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Andhra Chicken Curry</h2>
+      <div class="variant">
+        <span>Half - ₹179</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Andhra Chicken Curry - Half', 179, -1)">−</button>
+          <span id="qty-Andhra Chicken Curry - Half">0</span>
+          <button onclick="changeQuantity('Andhra Chicken Curry - Half', 179, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹269</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Andhra Chicken Curry - Full', 269, -1)">−</button>
+          <span id="qty-Andhra Chicken Curry - Full">0</span>
+          <button onclick="changeQuantity('Andhra Chicken Curry - Full', 269, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Butter Chicken</h2>
+      <div class="variant">
+        <span>Half - ₹189</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Butter Chicken - Half', 189, -1)">−</button>
+          <span id="qty-Butter Chicken - Half">0</span>
+          <button onclick="changeQuantity('Butter Chicken - Half', 189, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹309</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Butter Chicken - Full', 309, -1)">−</button>
+          <span id="qty-Butter Chicken - Full">0</span>
+          <button onclick="changeQuantity('Butter Chicken - Full', 309, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Dum Ka Chicken (Sunday Special)</h2>
+      <div class="variant">
+        <span>Half - ₹249</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Dum Ka Chicken - Half', 249, -1)">−</button>
+          <span id="qty-Dum Ka Chicken - Half">0</span>
+          <button onclick="changeQuantity('Dum Ka Chicken - Half', 249, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹399</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Dum Ka Chicken - Full', 399, -1)">−</button>
+          <span id="qty-Dum Ka Chicken - Full">0</span>
+          <button onclick="changeQuantity('Dum Ka Chicken - Full', 399, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+<div class="cart-button-container">
+    <a href="/cart/" class="go-to-cart-btn" style="padding: 10px 20px; background: green; color: white; text-decoration: none; border-radius: 5px;">Go to Cart</a>
+  </div>
+
+<script src="{% static 'kitchen/mandi.js' %}"></script>
+</body>
+</html>

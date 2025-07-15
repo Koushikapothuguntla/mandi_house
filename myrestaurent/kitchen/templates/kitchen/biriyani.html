@@ -1,0 +1,257 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Non-Veg Biryani Menu</title>
+  <link rel="stylesheet" href="{% static 'kitchen/biriyani.css' %}" />
+  <script>
+    function changeQuantity(item, price, delta) {
+      const qtyId = 'qty-' + item;
+      const qtyElem = document.getElementById(qtyId);
+      let qty = parseInt(qtyElem.textContent);
+      qty = Math.max(0, qty + delta);
+      qtyElem.textContent = qty;
+    }
+  </script>
+</head>
+<body>
+
+    <!-- VEG BIRYANIS SECTION -->
+       <h1>VEG BIRIYANI</h1>
+    <div class="items">
+      <h2>Veg Biryani Options</h2>
+      <div class="variant"><span>Veg Biryani - ₹129</span><div class="quantity"><button onclick="changeQuantity('Veg Biryani', 129, -1)">−</button><span id="qty-Veg Biryani">0</span><button onclick="changeQuantity('Veg Biryani', 129, 1)">+</button></div></div>
+      <div class="variant"><span>Plain Biryani Rice - ₹129</span><div class="quantity"><button onclick="changeQuantity('Plain Biryani Rice', 129, -1)">−</button><span id="qty-Plain Biryani Rice">0</span><button onclick="changeQuantity('Plain Biryani Rice', 129, 1)">+</button></div></div>
+      <div class="variant"><span>Paneer Biryani - ₹129</span><div class="quantity"><button onclick="changeQuantity('Paneer Biryani', 129, -1)">−</button><span id="qty-Paneer Biryani">0</span><button onclick="changeQuantity('Paneer Biryani', 129, 1)">+</button></div></div>
+      <div class="variant"><span>Kaju Biryani - ₹129</span><div class="quantity"><button onclick="changeQuantity('Kaju Biryani', 129, -1)">−</button><span id="qty-Kaju Biryani">0</span><button onclick="changeQuantity('Kaju Biryani', 129, 1)">+</button></div></div>
+      <div class="variant"><span>Mushroom Biryani - ₹129</span><div class="quantity"><button onclick="changeQuantity('Mushroom Biryani', 129, -1)">−</button><span id="qty-Mushroom Biryani">0</span><button onclick="changeQuantity('Mushroom Biryani', 129, 1)">+</button></div></div>
+      <div class="variant"><span>Kaju Paneer Biryani - ₹129</span><div class="quantity"><button onclick="changeQuantity('Kaju Paneer Biryani', 129, -1)">−</button><span id="qty-Kaju Paneer Biryani">0</span><button onclick="changeQuantity('Kaju Paneer Biryani', 129, 1)">+</button></div></div>
+    </div>
+
+  <h1>NON - VEG BIRIYANI</h1>
+
+  <!-- Items with QTR, HALF, FULL -->
+  <div class="items">
+    <h2>Dum Chicken Biryani</h2>
+    <div class="variant"><span>Qtr - ₹119</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Dum Chicken - Qtr', 119, -1)">−</button>
+        <span id="qty-Dum Chicken - Qtr">0</span>
+        <button onclick="changeQuantity('Dum Chicken - Qtr', 119, 1)">+</button>
+      </div>
+    </div>
+    <div class="variant"><span>Half - ₹169</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Dum Chicken - Half', 169, -1)">−</button>
+        <span id="qty-Dum Chicken - Half">0</span>
+        <button onclick="changeQuantity('Dum Chicken - Half', 169, 1)">+</button>
+      </div>
+    </div>
+    <div class="variant"><span>Full - ₹249</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Dum Chicken - Full', 249, -1)">−</button>
+        <span id="qty-Dum Chicken - Full">0</span>
+        <button onclick="changeQuantity('Dum Chicken - Full', 249, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="items">
+    <h2>Chicken Pakoda Biryani</h2>
+    <div class="variant"><span>Qtr - ₹129</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Chicken Pakoda - Qtr', 129, -1)">−</button>
+        <span id="qty-Chicken Pakoda - Qtr">0</span>
+        <button onclick="changeQuantity('Chicken Pakoda - Qtr', 129, 1)">+</button>
+      </div>
+    </div>
+    <div class="variant"><span>Half - ₹169</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Chicken Pakoda - Half', 169, -1)">−</button>
+        <span id="qty-Chicken Pakoda - Half">0</span>
+        <button onclick="changeQuantity('Chicken Pakoda - Half', 169, 1)">+</button>
+      </div>
+    </div>
+    <div class="variant"><span>Full - ₹249</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Chicken Pakoda - Full', 249, -1)">−</button>
+        <span id="qty-Chicken Pakoda - Full">0</span>
+        <button onclick="changeQuantity('Chicken Pakoda - Full', 249, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="items">
+    <h2>Fry Chicken Biryani</h2>
+    <div class="variant"><span>Qtr - ₹129</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Fry Chicken - Qtr', 129, -1)">−</button>
+        <span id="qty-Fry Chicken - Qtr">0</span>
+        <button onclick="changeQuantity('Fry Chicken - Qtr', 129, 1)">+</button>
+      </div>
+    </div>
+    <div class="variant"><span>Half - ₹169</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Fry Chicken - Half', 169, -1)">−</button>
+        <span id="qty-Fry Chicken - Half">0</span>
+        <button onclick="changeQuantity('Fry Chicken - Half', 169, 1)">+</button>
+      </div>
+    </div>
+    <div class="variant"><span>Full - ₹249</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Fry Chicken - Full', 249, -1)">−</button>
+        <span id="qty-Fry Chicken - Full">0</span>
+        <button onclick="changeQuantity('Fry Chicken - Full', 249, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="items">
+    <h2>Special Biryani</h2>
+    <div class="variant"><span>Half - ₹209</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Special - Half', 209, -1)">−</button>
+        <span id="qty-Special - Half">0</span>
+        <button onclick="changeQuantity('Special - Half', 209, 1)">+</button>
+      </div>
+    </div>
+    <div class="variant"><span>Full - ₹299</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Special - Full', 299, -1)">−</button>
+        <span id="qty-Special - Full">0</span>
+        <button onclick="changeQuantity('Special - Full', 299, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="items">
+    <h2>Lollipop Biryani</h2>
+    <div class="variant"><span>Half - ₹269</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Lollipop - Half', 269, -1)">−</button>
+        <span id="qty-Lollipop - Half">0</span>
+        <button onclick="changeQuantity('Lollipop - Half', 269, 1)">+</button>
+      </div>
+    </div>
+    <div class="variant"><span>Full - ₹359</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Lollipop - Full', 359, -1)">−</button>
+        <span id="qty-Lollipop - Full">0</span>
+        <button onclick="changeQuantity('Lollipop - Full', 359, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="items">
+    <h2>Mutton Biryani</h2>
+    <div class="variant"><span>Half - ₹309</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Mutton - Half', 309, -1)">−</button>
+        <span id="qty-Mutton - Half">0</span>
+        <button onclick="changeQuantity('Mutton - Half', 309, 1)">+</button>
+      </div>
+    </div>
+    <div class="variant"><span>Full - ₹609</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Mutton - Full', 609, -1)">−</button>
+        <span id="qty-Mutton - Full">0</span>
+        <button onclick="changeQuantity('Mutton - Full', 609, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="items">
+    <h2>Egg Biryani</h2>
+    <div class="variant"><span>Full - ₹139</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Egg Biryani - Full', 139, -1)">−</button>
+        <span id="qty-Egg Biryani - Full">0</span>
+        <button onclick="changeQuantity('Egg Biryani - Full', 139, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="items">
+    <h2>Mughalai Biryani</h2>
+    <div class="variant"><span>Full - ₹219</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Mughalai - Full', 219, -1)">−</button>
+        <span id="qty-Mughalai - Full">0</span>
+        <button onclick="changeQuantity('Mughalai - Full', 219, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="items">
+    <h2>Chicken 65 Biryani</h2>
+    <div class="variant"><span>Full - ₹289</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Chicken 65 - Full', 289, -1)">−</button>
+        <span id="qty-Chicken 65 - Full">0</span>
+        <button onclick="changeQuantity('Chicken 65 - Full', 289, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="items">
+    <h2>Mandi House Special Biryani</h2>
+    <div class="variant"><span>Full - ₹299</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Mandi House - Full', 299, -1)">−</button>
+        <span id="qty-Mandi House - Full">0</span>
+        <button onclick="changeQuantity('Mandi House - Full', 299, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="items">
+    <h2>Prawns Biryani</h2>
+    <div class="variant"><span>Full - ₹369</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Prawns - Full', 369, -1)">−</button>
+        <span id="qty-Prawns - Full">0</span>
+        <button onclick="changeQuantity('Prawns - Full', 369, 1)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXTRAS -->
+  <div class="extras">
+    <h2>Extras</h2>
+
+    <div class="variant">
+      <span>Boiled Egg - ₹15</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Boiled Egg', 15, -1)">−</button>
+        <span id="qty-Boiled Egg">0</span>
+        <button onclick="changeQuantity('Boiled Egg', 15, 1)">+</button>
+      </div>
+    </div>
+
+    <div class="variant">
+      <span>Dum Piece Extra - ₹90</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Dum Piece Extra', 90, -1)">−</button>
+        <span id="qty-Dum Piece Extra">0</span>
+        <button onclick="changeQuantity('Dum Piece Extra', 90, 1)">+</button>
+      </div>
+    </div>
+
+    <div class="variant">
+      <span>Fry Piece Extra - ₹99 (3 pcs)</span>
+      <div class="quantity">
+        <button onclick="changeQuantity('Fry Piece Extra', 99, -1)">−</button>
+        <span id="qty-Fry Piece Extra">0</span>
+        <button onclick="changeQuantity('Fry Piece Extra', 99, 1)">+</button>
+      </div>
+    </div>
+  </div>
+   <div class="cart-button-container">
+    <a href="/cart/" class="go-to-cart-btn" style="padding: 10px 20px; background: green; color: white; text-decoration: none; border-radius: 5px;">Go to Cart</a>
+  </div>
+   <script src="{% static 'kitchen/mandi.js' %}" defer></script>
+</body>
+</html>
+
+ 

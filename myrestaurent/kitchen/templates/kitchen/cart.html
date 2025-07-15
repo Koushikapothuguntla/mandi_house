@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="{% static 'kitchen/mandi.css' %}" />
+  <style>
+    body { font-family: Arial; padding: 30px; }
+    .cart-container { max-width: 600px; margin: auto; }
+    ul { list-style-type: none; padding: 0; }
+    li { margin: 8px 0; padding: 10px; border-bottom: 1px solid #ccc; }
+    .total { font-size: 18px; font-weight: bold; margin-top: 20px; }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: green;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: darkgreen;
+    }
+    #successMessage {
+      color: green;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+    <ul id="cartItems"></ul>
+    <p class="total">Total: ₹<span id="totalAmount">0</span></p>
+    <button onclick="confirmOrder()">✅ Confirm Order</button>
+    <p id="successMessage"></p>
+  </div>
+<script>
+  const cartItems = document.getElementById('cartItems');
+  const totalAmount = document.getElementById('totalAmount');
+  const messageBox = document.getElementById('successMessage');
+
+  function renderCart() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cartItems.innerHTML = '';
+    let total = 0;
+
+    cart.forEach(item => {
+      const quantity = item.quantity || 1;
+      const itemTotal = item.price * quantity;
+      const li = document.createElement('li');
+      li.textContent = `${item.name} × ${quantity} = ₹${itemTotal}`;
+      cartItems.appendChild(li);
+      total += itemTotal;
+    });
+
+    totalAmount.textContent = total;
+  }
+
+  function confirmOrder() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    if (cart.length === 0) {
+      alert("Cart is empty!");
+      return;
+    }
+
+    console.log("Sending cart to server:", cart);
+
+    fetch("/receive_order/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+        // CSRF not needed because @csrf_exempt is used
+      },
+      body: JSON.stringify({ cart: cart })
+    })
+    .then(async res => {
+      const data = await res.json();
+      if (!res.ok) {
+        console.error("Server Error:", data);
+        alert("❌ Server error: " + (data.message || data.error));
+        return;
+      }
+
+      messageBox.textContent = data.message || "✅ Order Confirmed!";
+      localStorage.removeItem("cart");
+      setTimeout(() => {
+        window.location.href = "/owner/dashboard/";
+      }, 1500);
+    })
+    .catch(error => {
+      console.error("Network Error:", error);
+      alert("⚠️ Something went wrong while sending the order.");
+    });
+  }
+
+  renderCart();
+</script>
+
+</body>
+</html>
+
+
+
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="{% static 'kitchen/mandi.css' %}" />
+</head>
+<body>
+  <div class="cart-container">
+    <h1>Your Cart</h1>
+    <ul id="cartItems"></ul>
+    <p class="total">Total: ₹<span id="totalAmount">0</span></p>
+    <button onclick="confirmOrder()">Confirm Order</button>
+    <p id="successMessage"></p>
+  </div>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItems = document.getElementById('cartItems');
+    const totalAmount = document.getElementById('totalAmount');
+    const messageBox = document.getElementById('successMessage');
+
+    function renderCart() {
+      cartItems.innerHTML = '';
+      let total = 0;
+
+      cart.forEach(item => {
+        const quantity = item.quantity || 1;
+        const itemTotal = item.price * quantity;
+        const li = document.createElement('li');
+        li.textContent = `${item.name} × ${quantity} = ₹${itemTotal}`;
+        cartItems.appendChild(li);
+        total += itemTotal;
+      });
+
+      totalAmount.textContent = total;
+    }
+
+    function confirmOrder() {
+      if (cart.length === 0) {
+        alert("Cart is empty!");
+        return;
+      }
+
+      fetch("/receive_order/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRFToken": getCookie("csrftoken")
+        },
+        body: JSON.stringify({ cart: cart })
+      })
+      .then(res => res.json())
+      .then(data => {
+        messageBox.textContent = "✅ Order Confirmed!";
+        localStorage.removeItem("cart");
+        setTimeout(() => location.reload(), 2000);
+      });
+    }
+
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let cookie of cookies) {
+          cookie = cookie.trim();
+          if (cookie.startsWith(name + '=')) {
+            cookieValue = decodeURIComponent(cookie.slice(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+
+    renderCart();
+  </script>
+</body>
+</html> -->
+
+

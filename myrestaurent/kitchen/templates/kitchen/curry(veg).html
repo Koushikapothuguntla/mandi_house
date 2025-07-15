@@ -1,0 +1,123 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curry & Add-ons Menu</title>
+  <link rel="stylesheet" href="{% static 'kitchen/mandi.css' %}" />
+</head>
+<body>
+
+  <h1> VEGETARIAN CURRIES </h1>
+  <div class="menu">
+
+    <!-- VEGETARIAN CURRIES -->
+    <div class="items">
+      <h2>Paneer Butter Masala</h2>
+      <div class="variant">
+        <span>Half - ₹179</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer Butter Masala - Half', 179, -1)">−</button>
+          <span id="qty-Paneer Butter Masala - Half">0</span>
+          <button onclick="changeQuantity('Paneer Butter Masala - Half', 179, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹279</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer Butter Masala - Full', 279, -1)">−</button>
+          <span id="qty-Paneer Butter Masala - Full">0</span>
+          <button onclick="changeQuantity('Paneer Butter Masala - Full', 279, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Mushroom Curry</h2>
+      <div class="variant">
+        <span>Half - ₹159</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mushroom Curry - Half', 159, -1)">−</button>
+          <span id="qty-Mushroom Curry - Half">0</span>
+          <button onclick="changeQuantity('Mushroom Curry - Half', 159, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹259</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mushroom Curry - Full', 259, -1)">−</button>
+          <span id="qty-Mushroom Curry - Full">0</span>
+          <button onclick="changeQuantity('Mushroom Curry - Full', 259, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Paneer Kadhai</h2>
+      <div class="variant">
+        <span>Half - ₹209</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer Kadhai - Half', 209, -1)">−</button>
+          <span id="qty-Paneer Kadhai - Half">0</span>
+          <button onclick="changeQuantity('Paneer Kadhai - Half', 209, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹279</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer Kadhai - Full', 279, -1)">−</button>
+          <span id="qty-Paneer Kadhai - Full">0</span>
+          <button onclick="changeQuantity('Paneer Kadhai - Full', 279, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Mushroom Capsicum Masala</h2>
+      <div class="variant">
+        <span>Half - ₹169</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mushroom Capsicum Masala - Half', 169, -1)">−</button>
+          <span id="qty-Mushroom Capsicum Masala - Half">0</span>
+          <button onclick="changeQuantity('Mushroom Capsicum Masala - Half', 169, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹269</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mushroom Capsicum Masala - Full', 269, -1)">−</button>
+          <span id="qty-Mushroom Capsicum Masala - Full">0</span>
+          <button onclick="changeQuantity('Mushroom Capsicum Masala - Full', 269, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Paneer Mattar Masala</h2>
+      <div class="variant">
+        <span>Half - ₹179</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer Mattar Masala - Half', 179, -1)">−</button>
+          <span id="qty-Paneer Mattar Masala - Half">0</span>
+          <button onclick="changeQuantity('Paneer Mattar Masala - Half', 179, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Full - ₹279</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer Mattar Masala - Full', 279, -1)">−</button>
+          <span id="qty-Paneer Mattar Masala - Full">0</span>
+          <button onclick="changeQuantity('Paneer Mattar Masala - Full', 279, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="cart-button-container">
+   <a href="/cart/" class="go-to-cart-btn" style="padding: 10px 20px; background: green; color: white; text-decoration: none; border-radius: 5px;">Go to Cart</a>
+  </div>
+
+ <script src="{% static 'kitchen/mandi.js' %}"></script>
+</body>
+</html>

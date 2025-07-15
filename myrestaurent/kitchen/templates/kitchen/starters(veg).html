@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starters (Veg)</title>
+  <link rel="stylesheet" href="{% static 'kitchen/mandi.css' %}" />
+</head>
+<body>
+
+  <h1>Starters (Veg)</h1>
+  <div class="menu">
+
+    <div class="items">
+      <h2>Pepper Mushroom Dry</h2>
+      <div class="variant">
+        <span>₹159</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Pepper Mushroom Dry', 159, -1)">−</button>
+          <span id="qty-Pepper Mushroom Dry">0</span>
+          <button onclick="changeQuantity('Pepper Mushroom Dry', 159, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Mushroom Manchurian</h2>
+      <div class="variant">
+        <span>₹159</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mushroom Manchurian', 159, -1)">−</button>
+          <span id="qty-Mushroom Manchurian">0</span>
+          <button onclick="changeQuantity('Mushroom Manchurian', 159, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Mushroom Chilli</h2>
+      <div class="variant">
+        <span>₹159</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mushroom Chilli', 159, -1)">−</button>
+          <span id="qty-Mushroom Chilli">0</span>
+          <button onclick="changeQuantity('Mushroom Chilli', 159, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Mushroom 65</h2>
+      <div class="variant">
+        <span>₹169</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mushroom 65', 169, -1)">−</button>
+          <span id="qty-Mushroom 65">0</span>
+          <button onclick="changeQuantity('Mushroom 65', 169, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Crispy Baby Corn</h2>
+      <div class="variant">
+        <span>₹179</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Crispy Baby Corn', 179, -1)">−</button>
+          <span id="qty-Crispy Baby Corn">0</span>
+          <button onclick="changeQuantity('Crispy Baby Corn', 179, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Baby Corn Manchurian</h2>
+      <div class="variant">
+        <span>₹169</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Baby Corn Manchurian', 169, -1)">−</button>
+          <span id="qty-Baby Corn Manchurian">0</span>
+          <button onclick="changeQuantity('Baby Corn Manchurian', 169, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Paneer Manchurian</h2>
+      <div class="variant">
+        <span>₹189</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer Manchurian', 189, -1)">−</button>
+          <span id="qty-Paneer Manchurian">0</span>
+          <button onclick="changeQuantity('Paneer Manchurian', 189, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Paneer 65</h2>
+      <div class="variant">
+        <span>₹189</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer 65', 189, -1)">−</button>
+          <span id="qty-Paneer 65">0</span>
+          <button onclick="changeQuantity('Paneer 65', 189, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Paneer Chilli</h2>
+      <div class="variant">
+        <span>₹189</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer Chilli', 189, -1)">−</button>
+          <span id="qty-Paneer Chilli">0</span>
+          <button onclick="changeQuantity('Paneer Chilli', 189, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Paneer Majestic</h2>
+      <div class="variant">
+        <span>₹199</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer Majestic', 199, -1)">−</button>
+          <span id="qty-Paneer Majestic">0</span>
+          <button onclick="changeQuantity('Paneer Majestic', 199, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Paneer Pakoda</h2>
+      <div class="variant">
+        <span>₹189</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer Pakoda', 189, -1)">−</button>
+          <span id="qty-Paneer Pakoda">0</span>
+          <button onclick="changeQuantity('Paneer Pakoda', 189, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cart-button-container">
+    <a href="/cart/" class="go-to-cart-btn" style="padding: 10px 20px; background: green; color: white; text-decoration: none; border-radius: 5px;">Go to Cart</a>
+  </div>
+
+  <script src="{% static 'kitchen/mandi.js' %}"></script>
+</body>
+</html>

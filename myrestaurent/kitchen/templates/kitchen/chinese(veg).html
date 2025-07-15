@@ -1,0 +1,93 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chinese Fried Rice Menu</title>
+  <link rel="stylesheet" href="{% static 'kitchen/mandi.css' %}" />
+</head>
+<body>
+
+  <h1>Chinese Fried Rice Menu</h1>
+  <div class="menu">
+
+    <!-- VEGETARIAN FRIED RICE -->
+    <div class="items">
+      <h2>Veg Fried Rice</h2>
+      <div class="variant">
+        <span>₹119</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Veg Fried Rice', 119, -1)">−</button>
+          <span id="qty-Veg Fried Rice">0</span>
+          <button onclick="changeQuantity('Veg Fried Rice', 119, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Zeera Fried Rice</h2>
+      <div class="variant">
+        <span>₹119</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Zeera Fried Rice', 119, -1)">−</button>
+          <span id="qty-Zeera Fried Rice">0</span>
+          <button onclick="changeQuantity('Zeera Fried Rice', 119, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Veg Schezwan Rice</h2>
+      <div class="variant">
+        <span>₹139</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Veg Schezwan Rice', 139, -1)">−</button>
+          <span id="qty-Veg Schezwan Rice">0</span>
+          <button onclick="changeQuantity('Veg Schezwan Rice', 139, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Kaju Fried Rice</h2>
+      <div class="variant">
+        <span>₹179</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Kaju Fried Rice', 179, -1)">−</button>
+          <span id="qty-Kaju Fried Rice">0</span>
+          <button onclick="changeQuantity('Kaju Fried Rice', 179, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Mushroom Fried Rice</h2>
+      <div class="variant">
+        <span>₹149</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mushroom Fried Rice', 149, -1)">−</button>
+          <span id="qty-Mushroom Fried Rice">0</span>
+          <button onclick="changeQuantity('Mushroom Fried Rice', 149, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Paneer Fried Rice</h2>
+      <div class="variant">
+        <span>₹169</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Paneer Fried Rice', 169, -1)">−</button>
+          <span id="qty-Paneer Fried Rice">0</span>
+          <button onclick="changeQuantity('Paneer Fried Rice', 169, 1)">+</button>
+        </div>
+      </div>
+    </div>
+  <div class="cart-button-container">
+  <a href="/cart/" class="go-to-cart-btn" style="padding: 10px 20px; background: green; color: white; text-decoration: none; border-radius: 5px;">Go to Cart</a>
+  </div>
+
+<script src="{% static 'kitchen/mandi.js' %}"></script>
+</body>
+</html>

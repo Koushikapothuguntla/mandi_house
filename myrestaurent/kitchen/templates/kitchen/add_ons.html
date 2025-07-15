@@ -1,0 +1,84 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curry & Add-ons Menu</title>
+  <link rel="stylesheet" href="{% static 'kitchen/mandi.css' %}" />
+</head>
+<body>
+
+  <h1> Add-ons Menu</h1>
+  <div class="menu">
+
+    <!-- ADD ONS -->
+    <div class="items">
+      <h2>Extra Fry Chicken Mandi (1PC)</h2>
+      <div class="variant">
+        <span>₹129</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Extra Fry Chicken Mandi', 129, -1)">−</button>
+          <span id="qty-Extra Fry Chicken Mandi">0</span>
+          <button onclick="changeQuantity('Extra Fry Chicken Mandi', 129, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Extra Juicy Chicken Mandi (1PC)</h2>
+      <div class="variant">
+        <span>₹129</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Extra Juicy Chicken Mandi', 129, -1)">−</button>
+          <span id="qty-Extra Juicy Chicken Mandi">0</span>
+          <button onclick="changeQuantity('Extra Juicy Chicken Mandi', 129, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Extra Fry Mutton Mandi (1PC)</h2>
+      <div class="variant">
+        <span>₹209</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Extra Fry Mutton Mandi', 209, -1)">−</button>
+          <span id="qty-Extra Fry Mutton Mandi">0</span>
+          <button onclick="changeQuantity('Extra Fry Mutton Mandi', 209, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Extra Juicy Mutton Mandi (1PC)</h2>
+      <div class="variant">
+        <span>₹219</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Extra Juicy Mutton Mandi', 219, -1)">−</button>
+          <span id="qty-Extra Juicy Mutton Mandi">0</span>
+          <button onclick="changeQuantity('Extra Juicy Mutton Mandi', 219, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Extra Mayo</h2>
+      <div class="variant">
+        <span>₹25</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Extra Mayo', 25, -1)">−</button>
+          <span id="qty-Extra Mayo">0</span>
+          <button onclick="changeQuantity('Extra Mayo', 25, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cart-button-container">
+    <a href="/cart/" class="go-to-cart-btn" style="padding: 10px 20px; background: green; color: white; text-decoration: none; border-radius: 5px;">Go to Cart</a>
+  </div>
+
+  <script src="{% static 'kitchen/mandi.js' %}"></script>
+</body>
+</html>

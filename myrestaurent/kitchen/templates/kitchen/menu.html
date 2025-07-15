@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu</title>
+  <link rel="stylesheet" href="{% static 'kitchen/mandi.css' %}" />
+</head>
+<body>
+  <h1>Menu</h1>
+  <div class="menu">
+    <div class="items">
+      <img src="download.jpg" alt="Starters Veg">
+      <h2>Starters (Veg)</h2>
+      <a href="{% url 'starters_veg' %}"><button type="button">View More</button></a>
+    </div>
+
+    <div class="items">
+      <img src="Parantha.jpg" alt="Starters Non-Veg">
+      <h2>Starters (Non-Veg)</h2>
+      <a href="{% url 'starters_non_veg' %}"><button type="button">View More</button></a>
+    </div>
+
+    <div class="items">
+      <img src="Icecreams.jpg" alt="Mandi">
+      <h2>Arabian Mandi</h2>
+      <a href="{% url 'mandi' %}"><button type="button">View More</button></a>
+    </div>
+
+    <div class="items">
+      <img src="download.jpg" alt="Biriyani">
+      <h2>Biriyani</h2>
+      <a href="{% url 'biriyani' %}"><button type="button">View More</button></a>
+    </div>
+
+    <div class="items">
+      <img src="pastry.jpg" alt="Chinese Veg">
+      <h2>Chinese (Veg)</h2>
+      <a href="{% url 'chinese_veg' %}"><button type="button">View More</button></a>
+    </div>
+
+    <div class="items">
+      <img src="download.jpg" alt="Chinese Non-Veg">
+      <h2>Chinese (Non-Veg)</h2>
+      <a href="{% url 'chinese_non_veg' %}"><button type="button">View More</button></a>
+    </div>
+
+    <div class="items">
+      <img src="download.jpg" alt="Curry Veg">
+      <h2>Curry (Veg)</h2>
+      <a href="{% url 'curry_veg' %}"><button type="button">View More</button></a>
+    </div>
+
+    <div class="items">
+      <img src="download.jpg" alt="Curry Non-Veg">
+      <h2>Curry (Non-Veg)</h2>
+      <a href="{% url 'curry_non_veg' %}"><button type="button">View More</button></a>
+    </div>
+
+    <div class="items">
+      <img src="download.jpg" alt="Indian Breads">
+      <h2>Indian Breads</h2>
+      <a href="{% url 'indian_breads' %}"><button type="button">View More</button></a>
+    </div>
+
+    <div class="items">
+      <img src="download.jpg" alt="Add Ons">
+      <h2>Add Ons</h2>
+      <a href="{% url 'add_ons' %}"><button type="button">View More</button></a>
+    </div>
+   
+  </div>
+</body>
+</html>

@@ -1,0 +1,260 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arabic Mandi Menu</title>
+  <link rel="stylesheet" href="{% static 'kitchen/mandi.css' %}" />
+</head>
+<body>
+
+  <h1>Arabic Mandi Menu</h1>
+  <div class="menu">
+
+    <!-- JUICY CHICKEN MANDI -->
+    <div class="items">
+      <h2>Juicy Chicken Mandi</h2>
+      <p>Chicken with saffron rice.</p>
+      <div class="variant">
+        <span>Solo - ₹299</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Juicy Chicken Mandi - Solo', 299, -1)">−</button>
+          <span id="qty-Juicy Chicken Mandi - Solo">0</span>
+          <button onclick="changeQuantity('Juicy Chicken Mandi - Solo', 299, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Duo - ₹439</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Juicy Chicken Mandi - Duo', 439, -1)">−</button>
+          <span id="qty-Juicy Chicken Mandi - Duo">0</span>
+          <button onclick="changeQuantity('Juicy Chicken Mandi - Duo', 439, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Trio - ₹619</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Juicy Chicken Mandi - Trio', 619, -1)">−</button>
+          <span id="qty-Juicy Chicken Mandi - Trio">0</span>
+          <button onclick="changeQuantity('Juicy Chicken Mandi - Trio', 619, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Squad - ₹829</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Juicy Chicken Mandi - Squad', 829, -1)">−</button>
+          <span id="qty-Juicy Chicken Mandi - Squad">0</span>
+          <button onclick="changeQuantity('Juicy Chicken Mandi - Squad', 829, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRY CHICKEN MANDI -->
+    <div class="items">
+      <h2>Fry Chicken Mandi</h2>
+      <p>Fried chicken with Mandi rice.</p>
+      <div class="variant">
+        <span>Solo - ₹289</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Fry Chicken Mandi - Solo', 289, -1)">−</button>
+          <span id="qty-Fry Chicken Mandi - Solo">0</span>
+          <button onclick="changeQuantity('Fry Chicken Mandi - Solo', 289, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Duo - ₹419</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Fry Chicken Mandi - Duo', 419, -1)">−</button>
+          <span id="qty-Fry Chicken Mandi - Duo">0</span>
+          <button onclick="changeQuantity('Fry Chicken Mandi - Duo', 419, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Trio - ₹609</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Fry Chicken Mandi - Trio', 609, -1)">−</button>
+          <span id="qty-Fry Chicken Mandi - Trio">0</span>
+          <button onclick="changeQuantity('Fry Chicken Mandi - Trio', 609, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Squad - ₹809</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Fry Chicken Mandi - Squad', 809, -1)">−</button>
+          <span id="qty-Fry Chicken Mandi - Squad">0</span>
+          <button onclick="changeQuantity('Fry Chicken Mandi - Squad', 809, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MUTTON JUICY MANDI -->
+    <div class="items">
+      <h2>Mutton Juicy Mandi</h2>
+      <p>Succulent mutton with saffron rice.</p>
+      <div class="variant">
+        <span>Solo - ₹389</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mutton Juicy Mandi - Solo', 389, -1)">−</button>
+          <span id="qty-Mutton Juicy Mandi - Solo">0</span>
+          <button onclick="changeQuantity('Mutton Juicy Mandi - Solo', 389, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Duo - ₹699</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mutton Juicy Mandi - Duo', 699, -1)">−</button>
+          <span id="qty-Mutton Juicy Mandi - Duo">0</span>
+          <button onclick="changeQuantity('Mutton Juicy Mandi - Duo', 699, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Trio - ₹889</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mutton Juicy Mandi - Trio', 889, -1)">−</button>
+          <span id="qty-Mutton Juicy Mandi - Trio">0</span>
+          <button onclick="changeQuantity('Mutton Juicy Mandi - Trio', 889, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Squad - ₹1119</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mutton Juicy Mandi - Squad', 1119, -1)">−</button>
+          <span id="qty-Mutton Juicy Mandi - Squad">0</span>
+          <button onclick="changeQuantity('Mutton Juicy Mandi - Squad', 1119, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FRY MUTTON MANDI -->
+    <div class="items">
+      <h2>Fry Mutton Mandi</h2>
+      <p>Fried mutton with aromatic rice.</p>
+      <div class="variant">
+        <span>Solo - ₹369</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Fry Mutton Mandi - Solo', 369, -1)">−</button>
+          <span id="qty-Fry Mutton Mandi - Solo">0</span>
+          <button onclick="changeQuantity('Fry Mutton Mandi - Solo', 369, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Duo - ₹669</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Fry Mutton Mandi - Duo', 669, -1)">−</button>
+          <span id="qty-Fry Mutton Mandi - Duo">0</span>
+          <button onclick="changeQuantity('Fry Mutton Mandi - Duo', 669, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Trio - ₹879</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Fry Mutton Mandi - Trio', 879, -1)">−</button>
+          <span id="qty-Fry Mutton Mandi - Trio">0</span>
+          <button onclick="changeQuantity('Fry Mutton Mandi - Trio', 879, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Squad - ₹1019</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Fry Mutton Mandi - Squad', 1019, -1)">−</button>
+          <span id="qty-Fry Mutton Mandi - Squad">0</span>
+          <button onclick="changeQuantity('Fry Mutton Mandi - Squad', 1019, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MINI MANDI -->
+    <div class="items">
+      <h2>Mini Mandi (Only Dine-in)</h2>
+      <div class="variant">
+        <span>Fry - ₹199</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mini Mandi - Fry', 199, -1)">−</button>
+          <span id="qty-Mini Mandi - Fry">0</span>
+          <button onclick="changeQuantity('Mini Mandi - Fry', 199, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>Juicy - ₹219</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Mini Mandi - Juicy', 219, -1)">−</button>
+          <span id="qty-Mini Mandi - Juicy">0</span>
+          <button onclick="changeQuantity('Mini Mandi - Juicy', 219, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ALL MIX CHICKEN -->
+    <div class="items">
+      <h2>All Mix Chicken</h2>
+      <div class="variant">
+        <span>2PC - ₹419</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('All Mix Chicken 2PC', 419, -1)">−</button>
+          <span id="qty-All Mix Chicken 2PC">0</span>
+          <button onclick="changeQuantity('All Mix Chicken 2PC', 419, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>4PC - ₹819</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('All Mix Chicken 4PC', 819, -1)">−</button>
+          <span id="qty-All Mix Chicken 4PC">0</span>
+          <button onclick="changeQuantity('All Mix Chicken 4PC', 819, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- LOLLIPOP MANDI -->
+    <div class="items">
+      <h2>Lollipop Mandi</h2>
+      <div class="variant">
+        <span>4PC - ₹499</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Lollipop Mandi 4PC', 499, -1)">−</button>
+          <span id="qty-Lollipop Mandi 4PC">0</span>
+          <button onclick="changeQuantity('Lollipop Mandi 4PC', 499, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>8PC - ₹899</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Lollipop Mandi 8PC', 899, -1)">−</button>
+          <span id="qty-Lollipop Mandi 8PC">0</span>
+          <button onclick="changeQuantity('Lollipop Mandi 8PC', 899, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXTRA MANDI RICE -->
+    <div class="items">
+      <h2>Extra Mandi Rice</h2>
+      <div class="variant">
+        <span>₹60</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Extra Mandi Rice 60', 60, -1)">−</button>
+          <span id="qty-Extra Mandi Rice 60">0</span>
+          <button onclick="changeQuantity('Extra Mandi Rice 60', 60, 1)">+</button>
+        </div>
+      </div>
+      <div class="variant">
+        <span>₹110</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Extra Mandi Rice 110', 110, -1)">−</button>
+          <span id="qty-Extra Mandi Rice 110">0</span>
+          <button onclick="changeQuantity('Extra Mandi Rice 110', 110, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cart-button-container">
+    <a href="/cart/" class="go-to-cart-btn" style="padding: 10px 20px; background: green; color: white; text-decoration: none; border-radius: 5px;">Go to Cart</a>
+  </div>
+
+<script src="{% static 'kitchen/mandi.js' %}"></script>
+</body>
+</html>

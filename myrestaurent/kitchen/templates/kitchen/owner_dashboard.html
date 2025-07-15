@@ -1,0 +1,31 @@
+<h2>Owner Dashboard</h2>
+
+<h3>🧾 All Orders</h3>
+{% for order in orders %}
+    <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+        <p><strong>Order ID:</strong> {{ order.id }} | <strong>Time:</strong> {{ order.created_at }}</p>
+        <ul>
+            {% for item in order.items.all %}
+                <li>{{ item.name }} × {{ item.quantity }} = ₹{{ item.price|floatformat:2 }}</li>
+            {% endfor %}
+        </ul>
+        <form method="get" action="{% url 'print_order_slip' order.id %}">
+            <button type="submit">🖨️ Print Slip (KOT)</button>
+        </form>
+    </div>
+{% endfor %}
+
+<hr>
+
+<h3>📆 Today's Summary ({{ todays_orders.count }} Orders)</h3>
+<p><strong>Total Items Sold:</strong> {{ total_items_sold }}</p>
+
+<table border="1">
+  <tr><th>Item Name</th><th>Quantity Sold</th></tr>
+  {% for item in item_counts %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity_sold }}</td>
+    </tr>
+  {% endfor %}
+</table>

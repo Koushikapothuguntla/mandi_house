@@ -1,0 +1,10 @@
+<h2>Order Slip</h2>
+<p><strong>Order ID:</strong> {{ order.id }}</p>
+<p><strong>Time:</strong> {{ order.created_at }}</p>
+<hr>
+<ul>
+  {% for item in order.items.all %}
+    <li>{{ item.name }} × {{ item.quantity }} = ₹{{ item.price|floatformat:2 }}</li>
+  {% endfor %}
+</ul>
+<button onclick="window.print()">🖨️ Print</button>

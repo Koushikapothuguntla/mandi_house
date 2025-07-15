@@ -1,0 +1,59 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curry & Add-ons Menu</title>
+  <link rel="stylesheet" href="{% static 'kitchen/mandi.css' %}" />
+</head>
+<body>
+
+  <h1>INDIAN BREADS</h1>
+  <div class="menu">
+
+    <!-- INDIAN BREADS -->
+    <div class="items">
+      <h2>Tandoori Roti</h2>
+      <div class="variant">
+        <span>₹12</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Tandoori Roti', 12, -1)">−</button>
+          <span id="qty-Tandoori Roti">0</span>
+          <button onclick="changeQuantity('Tandoori Roti', 12, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Butter Roti</h2>
+      <div class="variant">
+        <span>₹15</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Butter Roti', 15, -1)">−</button>
+          <span id="qty-Butter Roti">0</span>
+          <button onclick="changeQuantity('Butter Roti', 15, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="items">
+      <h2>Butter Naan</h2>
+      <div class="variant">
+        <span>₹35</span>
+        <div class="quantity">
+          <button onclick="changeQuantity('Butter Naan', 35, -1)">−</button>
+          <span id="qty-Butter Naan">0</span>
+          <button onclick="changeQuantity('Butter Naan', 35, 1)">+</button>
+        </div>
+      </div>
+    </div>
+
+    
+<div class="cart-button-container">
+      <a href="/cart/" class="go-to-cart-btn" style="padding: 10px 20px; background: green; color: white; text-decoration: none; border-radius: 5px;">Go to Cart</a>
+  </div>
+
+<script src="{% static 'kitchen/mandi.js' %}"></script>
+</body>
+</html>

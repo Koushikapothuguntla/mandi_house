@@ -1,0 +1,62 @@
+    body {
+      font-family: Arial, sans-serif;
+      background: #1e2a38;
+      color: #f8c84c;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .items {
+      background: #2a3b4d;
+      padding: 16px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      width: 320px;
+    }
+
+    .items h2 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #fff4b3;
+    }
+
+    .variant {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 6px 0;
+    }
+
+    .variant span {
+      font-size: 14px;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .quantity button {
+      width: 24px;
+      height: 24px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: #f8c84c;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .extras {
+      margin-top: 40px;
+    }
+
+    .extras div {
+      margin: 6px 0;
+    }

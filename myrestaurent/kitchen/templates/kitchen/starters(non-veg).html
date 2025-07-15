@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Starters (Non-Veg)</title>
+  <link rel="stylesheet" href="{% static 'kitchen/mandi.css' %}" />
+</head>
+<body>
+
+  <h1>Starters (Non-Veg)</h1>
+
+  <div class="menu">
+
+    <!-- Egg Starters -->
+    <div class="items"><h2>Egg Pakoda</h2><div class="variant"><span>₹129</span><div class="quantity"><button onclick="changeQuantity('Egg Pakoda', 129, -1)">−</button><span id="qty-Egg Pakoda">0</span><button onclick="changeQuantity('Egg Pakoda', 129, 1)">+</button></div></div></div>
+    <div class="items"><h2>Egg 65</h2><div class="variant"><span>₹139</span><div class="quantity"><button onclick="changeQuantity('Egg 65', 139, -1)">−</button><span id="qty-Egg 65">0</span><button onclick="changeQuantity('Egg 65', 139, 1)">+</button></div></div></div>
+    <div class="items"><h2>Egg Chilli</h2><div class="variant"><span>₹149</span><div class="quantity"><button onclick="changeQuantity('Egg Chilli', 149, -1)">−</button><span id="qty-Egg Chilli">0</span><button onclick="changeQuantity('Egg Chilli', 149, 1)">+</button></div></div></div>
+    <div class="items"><h2>Egg Manchurian</h2><div class="variant"><span>₹149</span><div class="quantity"><button onclick="changeQuantity('Egg Manchurian', 149, -1)">−</button><span id="qty-Egg Manchurian">0</span><button onclick="changeQuantity('Egg Manchurian', 149, 1)">+</button></div></div></div>
+
+    <!-- Chicken Starters -->
+    <div class="items"><h2>Schezwan Chicken</h2><div class="variant"><span>₹199</span><div class="quantity"><button onclick="changeQuantity('Schezwan Chicken', 199, -1)">−</button><span id="qty-Schezwan Chicken">0</span><button onclick="changeQuantity('Schezwan Chicken', 199, 1)">+</button></div></div></div>
+    <div class="items"><h2>Lemon Chicken</h2><div class="variant"><span>₹199</span><div class="quantity"><button onclick="changeQuantity('Lemon Chicken', 199, -1)">−</button><span id="qty-Lemon Chicken">0</span><button onclick="changeQuantity('Lemon Chicken', 199, 1)">+</button></div></div></div>
+    <div class="items"><h2>Chicken Manchurian</h2><div class="variant"><span>₹199</span><div class="quantity"><button onclick="changeQuantity('Chicken Manchurian', 199, -1)">−</button><span id="qty-Chicken Manchurian">0</span><button onclick="changeQuantity('Chicken Manchurian', 199, 1)">+</button></div></div></div>
+    <div class="items"><h2>Chicken 65</h2><div class="variant"><span>₹199</span><div class="quantity"><button onclick="changeQuantity('Chicken 65', 199, -1)">−</button><span id="qty-Chicken 65">0</span><button onclick="changeQuantity('Chicken 65', 199, 1)">+</button></div></div></div>
+    <div class="items"><h2>Chilli Chicken</h2><div class="variant"><span>₹199</span><div class="quantity"><button onclick="changeQuantity('Chilli Chicken', 199, -1)">−</button><span id="qty-Chilli Chicken">0</span><button onclick="changeQuantity('Chilli Chicken', 199, 1)">+</button></div></div></div>
+    <div class="items"><h2>Guntur Chicken</h2><div class="variant"><span>₹259</span><div class="quantity"><button onclick="changeQuantity('Guntur Chicken', 259, -1)">−</button><span id="qty-Guntur Chicken">0</span><button onclick="changeQuantity('Guntur Chicken', 259, 1)">+</button></div></div></div>
+    <div class="items"><h2>Garlic Chicken</h2><div class="variant"><span>₹249</span><div class="quantity"><button onclick="changeQuantity('Garlic Chicken', 249, -1)">−</button><span id="qty-Garlic Chicken">0</span><button onclick="changeQuantity('Garlic Chicken', 249, 1)">+</button></div></div></div>
+    <div class="items"><h2>RR Chicken</h2><div class="variant"><span>₹209</span><div class="quantity"><button onclick="changeQuantity('RR Chicken', 209, -1)">−</button><span id="qty-RR Chicken">0</span><button onclick="changeQuantity('RR Chicken', 209, 1)">+</button></div></div></div>
+    <div class="items"><h2>Chicken Majestic</h2><div class="variant"><span>₹209</span><div class="quantity"><button onclick="changeQuantity('Chicken Majestic', 209, -1)">−</button><span id="qty-Chicken Majestic">0</span><button onclick="changeQuantity('Chicken Majestic', 209, 1)">+</button></div></div></div>
+    <div class="items"><h2>Chicken Lollipop</h2><div class="variant"><span>₹249</span><div class="quantity"><button onclick="changeQuantity('Chicken Lollipop', 249, -1)">−</button><span id="qty-Chicken Lollipop">0</span><button onclick="changeQuantity('Chicken Lollipop', 249, 1)">+</button></div></div></div>
+    <div class="items"><h2>Dragon Chicken</h2><div class="variant"><span>₹269</span><div class="quantity"><button onclick="changeQuantity('Dragon Chicken', 269, -1)">−</button><span id="qty-Dragon Chicken">0</span><button onclick="changeQuantity('Dragon Chicken', 269, 1)">+</button></div></div></div>
+    <div class="items"><h2>Kaju Chicken</h2><div class="variant"><span>₹259</span><div class="quantity"><button onclick="changeQuantity('Kaju Chicken', 259, -1)">−</button><span id="qty-Kaju Chicken">0</span><button onclick="changeQuantity('Kaju Chicken', 259, 1)">+</button></div></div></div>
+    <div class="items"><h2>Pepper Chicken</h2><div class="variant"><span>₹219</span><div class="quantity"><button onclick="changeQuantity('Pepper Chicken', 219, -1)">−</button><span id="qty-Pepper Chicken">0</span><button onclick="changeQuantity('Pepper Chicken', 219, 1)">+</button></div></div></div>
+    <div class="items"><h2>Chicken 555</h2><div class="variant"><span>₹219</span><div class="quantity"><button onclick="changeQuantity('Chicken 555', 219, -1)">−</button><span id="qty-Chicken 555">0</span><button onclick="changeQuantity('Chicken 555', 219, 1)">+</button></div></div></div>
+
+    <!-- Mutton & Prawns -->
+    <div class="items"><h2>Chilli Mutton</h2><div class="variant"><span>₹299</span><div class="quantity"><button onclick="changeQuantity('Chilli Mutton', 299, -1)">−</button><span id="qty-Chilli Mutton">0</span><button onclick="changeQuantity('Chilli Mutton', 299, 1)">+</button></div></div></div>
+    <div class="items"><h2>Mutton 65</h2><div class="variant"><span>₹299</span><div class="quantity"><button onclick="changeQuantity('Mutton 65', 299, -1)">−</button><span id="qty-Mutton 65">0</span><button onclick="changeQuantity('Mutton 65', 299, 1)">+</button></div></div></div>
+    <div class="items"><h2>Prawns (65, Golden, Loose)</h2><div class="variant"><span>₹299</span><div class="quantity"><button onclick="changeQuantity('Prawns (65, Golden, Loose)', 299, -1)">−</button><span id="qty-Prawns (65, Golden, Loose)">0</span><button onclick="changeQuantity('Prawns (65, Golden, Loose)', 299, 1)">+</button></div></div></div>
+    <div class="items"><h2>Mandi House Special</h2><div class="variant"><span>₹299</span><div class="quantity"><button onclick="changeQuantity('Mandi House Special', 299, -1)">−</button><span id="qty-Mandi House Special">0</span><button onclick="changeQuantity('Mandi House Special', 299, 1)">+</button></div></div></div>
+
+  </div>
+
+  <div class="cart-button-container">
+    <a href="/cart/" class="go-to-cart-btn" style="padding: 10px 20px; background: green; color: white; text-decoration: none; border-radius: 5px;">Go to Cart</a>
+  </div>
+
+  <script src="{% static 'kitchen/mandi.js' %}"></script>
+</body>
+</html>
